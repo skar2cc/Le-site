@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Avancé avec Onglets</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <ul>
+      <li><a href="#calculator" onclick="showTab('calculator')">Calculatrice</a></li>
+      <li><a href="#tictactoe" onclick="showTab('tictactoe')">Tic-Tac-Toe</a></li>
+      <li><a href="#about" onclick="showTab('about')">À Propos</a></li>
+      <li><a href="#teaser" onclick="showTab('teaser')">Teasing</a></li>
+    </ul>
+  </div>
+  
+  <div id="calculator" class="tab-content">
+    <h2>Calculatrice Avancée</h2>
+    <div class="calculator">
+      <input type="text" id="calc-display" class="display" disabled>
+      <div class="buttons">
+        <button onclick="appendToCalc('1')">1</button>
+        <button onclick="appendToCalc('2')">2</button>
+        <button onclick="appendToCalc('3')">3</button>
+        <button onclick="appendToCalc('+')">+</button>
+        <button onclick="appendToCalc('4')">4</button>
+        <button onclick="appendToCalc('5')">5</button>
+        <button onclick="appendToCalc('6')">6</button>
+        <button onclick="appendToCalc('-')">-</button>
+        <button onclick="appendToCalc('7')">7</button>
+        <button onclick="appendToCalc('8')">8</button>
+        <button onclick="appendToCalc('9')">9</button>
+        <button onclick="appendToCalc('*')">*</button>
+        <button onclick="appendToCalc('0')">0</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="clearCalc()">C</button>
+        <button onclick="appendToCalc('/')">/</button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="tictactoe" class="tab-content">
+    <h2>Jeu de Tic-Tac-Toe</h2>
+    <div class="board">
+      <div class="cell" onclick="makeMove(this)"></div>
+      <div class="cell" onclick="makeMove(this)"></div>
+      <div class="cell" onclick="makeMove(this)"></div>
+      <div class="cell" onclick="makeMove(this)"></div>
+      <div class="cell" onclick="makeMove(this)"></div>
+      <div class="cell" onclick="makeMove(this)"></div>
+      <div class="cell" onclick="makeMove(this)"></div>
+      <div class="cell" onclick="makeMove(this)"></div>
+      <div class="cell" onclick="makeMove(this)"></div>
+    </div>
+    <button onclick="resetGame()">Redémarrer le Jeu</button>
+  </div>
+
+  <div id="about" class="tab-content">
+    <h2>À Propos</h2>
+    <p>Bienvenue sur notre site web ! Ce site est conçu pour démontrer des fonctionnalités avancées en utilisant HTML, CSS, et JavaScript. Découvrez nos projets intégrés : une calculatrice moderne, un jeu de Tic-Tac-Toe dynamique, et plus encore.</p>
+  </div>
+
+  <div id="teaser" class="tab-content">
+    <h2>Teasing</h2>
+    <p>Restez à l'écoute ! De nouvelles fonctionnalités excitantes arrivent bientôt. Nous travaillons dur pour vous offrir une expérience encore meilleure.</p>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
